@@ -10,7 +10,7 @@ vector <string>::iterator it;
 
 bool compare(string a, string b)        //sort 함수에서 정렬의 방식을 임의로 정하기 위한 함수
 {
-    if(a.size()!=b.size())      //만약 길이가 같다면 문자열의 문자 자체를 비교해 사전순으로 출력한다.
+    if(a.size()==b.size())      //만약 길이가 같다면 문자열의 문자 자체를 비교해 사전순으로 출력한다.
         return a<b;
     else
         return a.size()<b.size();       //만약 길이가 다르다면 오름차순으로 길이가 짧은 것부터 출력한다.
