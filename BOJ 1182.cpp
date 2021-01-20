@@ -19,7 +19,7 @@ void solve(int index,int sum)
     if(sum+arr[index]==s)       //만약 수열들의 합이 만족하는 값을 찾았다면 cnt 변수를 증가시켜준다.
         cnt++;
 
-    solve(index+1,sum);  //숫자를 사용하지 않는 경우.
+    solve(index+1,sum); //숫자를 사용하지 않는 경우. 즉 arr[index]의 값을 사용하지 않고 index+1을 하여 다음 index로 넘어가겠다라는 것을 의미한다.
 
     solve(index+1,sum+arr[index]);  //숫자를 사용하는 경우. 재귀가 반복될수록 하나의 부분 수열을 뽑던 조합에서 2개를 뽑는 조합으로, 
                                     //2개에서 3개로 뽑는 조합처럼 다음 뽑을 조합의 개수를 늘어나게 된다.
