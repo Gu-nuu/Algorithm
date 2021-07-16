@@ -35,32 +35,11 @@ int solution(int n, vector<int> lost, vector<int> reserve)
 
         for (int j = 0; j < lost.size(); j++)
         {
-            if (reserve[i] == 1) // 빌려주는 사람이 1번인 경우에 대한 예외 처리
+            if (reserve[i] - 1 == lost[j] || reserve[i] + 1 == lost[j]) // 맨 앞 번호와 맨 끝 번호의 경우를 제외한 경우
             {
-                if (reserve[i] + 1 == lost[j])
-                {
-                    answer += 1; // 체육 수업을 들을 수 있는 사람의 수를 증가
-                    lost_num--;  // 체육복을 잃어버리 사람의 수는 감소
-                    break;
-                }
-            }
-            else if (reserve[i] == n) // 빌려주는 사람이 끝 번호인 경우에 대한 예외 처리
-            {
-                if (reserve[i] - 1 == lost[j])
-                {
-                    answer += 1;
-                    lost_num--;
-                    break;
-                }
-            }
-            else
-            {
-                if (reserve[i] - 1 == lost[j] || reserve[i] + 1 == lost[j]) // 맨 앞 번호와 맨 끝 번호의 경우를 제외한 경우
-                {
-                    answer += 1;
-                    lost_num--;
-                    break;
-                }
+                answer += 1; // 체육 수업을 들을 수 있는 사람의 수를 증가
+                lost_num--;  // 체육복을 잃어버리 사람의 수는 감소
+                break;
             }
         }
     }
