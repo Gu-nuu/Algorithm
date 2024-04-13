@@ -3,6 +3,10 @@
         "vector": "cpp",
         "iostream": "cpp",
         "ios": "cpp",
-        "deque": "cpp"
+        "deque": "cpp",
+        "queue": "cpp",
+        "istream": "cpp",
+        "locale": "cpp",
+        "tuple": "cpp"
     }
 }
