@@ -46,6 +46,7 @@ int main()
     {
         string temp;
         cin >> temp;
+
         for (int j = 0; j < N; j++)
         {
             chunk[i][j] = temp[j] - '0';
